@@ -1,7 +1,8 @@
-const SkillCard = () => {
-     return <div>
+import React from 'react';
+import './SkillCard.scss';
 
-     </div>
+const SkillCard = () => {
+     return (<div></div>)
 }
 
 export default SkillCard;

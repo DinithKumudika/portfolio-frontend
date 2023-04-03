@@ -1,21 +1,13 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-  color-scheme: light dark;
+:root {
+  --font-primary: 'Poppins', sans-serif;
   --primary-color: #edf2f8;
-  --secondary-color: #ce5403;
+  --secondary-color: #ee7c03;
   --black-color: #030303;
   --white-color: #ffffff;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
 * {

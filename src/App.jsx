@@ -1,13 +1,20 @@
-import './App.css';
-import './index.css';
 import React from 'react';
+import './App.scss';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Header, Footer, About, Contact, Skills, Projects } from './containers';
+import { Header, Footer, Home, About, Contact, Skills, Projects } from './containers';
 import { client, urlFor } from './client';
 
 const App = () => {
   return (
-      <h1>Hello world</h1>
+      <div className='app'>
+        <Header/>
+        <Home/>
+        <About/>
+        <Skills/>
+        <Projects/>
+        <Contact/>
+        <Footer/>
+      </div>
   )
 }
 
