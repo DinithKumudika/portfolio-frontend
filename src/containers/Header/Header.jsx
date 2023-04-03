@@ -1,7 +1,12 @@
-const About = () => {
-     return <div className="header-container">
+import React from 'react';
+import './Header.scss';
 
-     </div>
+const Header = () => {
+     return (
+          <div className="header-container">
+               
+          </div>
+     )
 }
 
-export default About;
+export default Header;

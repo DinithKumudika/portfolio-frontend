@@ -1,15 +1,14 @@
 import './App.css';
-import './index.scss';
-import './components/Navbar/Navbar'
+import './index.css';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Header, Footer, About, Contact, Skills, Projects } from './containers';
+import { client, urlFor } from './client';
 
 const App = () => {
-
   return (
-    <div className="App">
-      <Navbar></Navbar>
       <h1>Hello world</h1>
-    </div>
   )
 }
 
-export default App
+export default App;
