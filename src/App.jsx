@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Header, Footer, Home, About, Contact, Skills, Projects } from './containers';
+import { BrowserRouter} from "react-router-dom";
+import { Footer, Home, About, Contact, Skills, Projects } from './containers';
 import { Navbar } from './components/';
-import { client, urlFor } from './client';
 
 const App = () => {
   return (

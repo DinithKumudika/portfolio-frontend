@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { HiMenuAlt2, HiX } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 import { easeInOut, motion } from 'framer-motion';
 import './Navbar.scss';
-import { images } from '../../constants';
+import { images} from '../../constants';
 
 const Navbar = () => {
 
      const [toggle, setToggle] = useState(false);
+     // const [scrolled, setScrolled] = useState(false);
 
      const nav = ['home', 'about', 'skills', 'projects', 'contact'];
 
@@ -18,7 +20,7 @@ const Navbar = () => {
                <ul className='nav__links'>
                     {nav.map((navItem) => {
                          <li key={`nav-${nav.indexOf(navItem)}`} className='app__flex p-text'>
-                                   <a href={`#${navItem}`}>{navItem}</a>
+                                   <a href={`#${navItem.id}`}>{navItem}</a>
                          </li>
                     })}
                </ul>

@@ -2,12 +2,14 @@
 
 :root {
   --font-primary: 'Poppins', sans-serif;
-  --primary-color: #101a2f;
-  --secondary-color: #ee7c03;
+  --primary-color: #3c3f45;
+  --secondary-color: #f48915;
   --black-color: #030303;
   --white-color: #ffffff;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
+  --lightGray: #D9D9D9;
+  --darkGray: #464D53;
+  --gray: #9c9c9c;
+  --cardColor: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
 }
 
 * {
