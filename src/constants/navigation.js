@@ -1,26 +1,26 @@
 const nav = [
      {
-          id: "home",
+          id: 1,
           title: "Home",
           link: "/"
      },
      {
-          id: "about",
+          id: 2,
           title: "About",
           link: "/about"
      },
      {
-          id: "skills",
+          id: 3,
           title: "Skills",
           link: "/skills"
      },
      {
-          id: "projects",
+          id: 4,
           title: "Projects",
           link: "/projects"
      },
      {
-          id: "footer",
+          id: 5,
           title: "Footer",
           link: "/footer"
      }
