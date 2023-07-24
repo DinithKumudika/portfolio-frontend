@@ -11,6 +11,7 @@ const App = () => (
         <Navbar />
       </div>
     </div>
+    <Home id={'home'} title={'Home'}/>
   </div>
 );
 
