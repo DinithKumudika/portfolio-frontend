@@ -1,17 +1,14 @@
 import React from 'react';
 import './App.scss';
-import { styles } from './style';
+import { Navbar, ScrollToTop } from './components'
 import { About, Home } from './containers';
-import { Navbar } from './components';
 
 const App = () => (
-  <div className='bg-primary w-full overflow-hidden'>
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar />
-      </div>
-    </div>
-    <Home id={'home'} title={'Home'}/>
+  <div className='w-full overflow-hidden'>
+    <Navbar />
+    <Home id={'home'} title={'Home'} />
+    <About id={'about'} title={'About'} />
+    <ScrollToTop />
   </div>
 );
 
