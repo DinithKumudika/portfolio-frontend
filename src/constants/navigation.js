@@ -11,11 +11,16 @@ const nav = [
      },
      {
           id: 3,
+          title: "Education",
+          link: "education"
+     },
+     {
+          id: 4,
           title: "Skills",
           link: "skills"
      },
      {
-          id: 4,
+          id: 5,
           title: "Projects",
           link: "projects"
      }

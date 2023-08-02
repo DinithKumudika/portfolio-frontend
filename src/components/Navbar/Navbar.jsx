@@ -27,13 +27,13 @@ const Navbar = () => {
      }, []);
 
      return (
-          <nav className={`fixed top-0 left-0 right-0 w-full flex py-6 justify-between items-center navbar z-10 bg-primary ${scrolled ? 'backdrop-blur-md bg-opacity-80' : ''}`}>
+          <nav className={`fixed top-0 left-0 right-0 w-full flex py-6 justify-between items-center navbar z-10 ${scrolled ? 'backdrop-blur-md bg-opacity-30' : ''}`}>
                <div>
                     <h1 className='text-4xl ml-2 text-white cursor-pointer' id='logo' onClick={scroll.scrollToTop}>Dinith</h1>
                </div>
                <ul className="z-50 list-none hidden md:flex justify-end items-center flex-1">
                     {nav.map(({ id, title, link }, index) => (
-                         <motion.li key={id} className={`nav-links px-4 cursor-pointer capitalize text-lg text-gray-400 hover:scale-105 hover:text-white duration-200 nav-link`}>
+                         <motion.li key={id} className={`nav-links px-4 cursor-pointer capitalize text-lg text-white hover:scale-105 duration-200 nav-link`}>
                               <Link to={link} smooth duration={300} spy={true} activeClass='text-blue'>
                                    {title}
                               </Link>

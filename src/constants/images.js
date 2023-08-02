@@ -1,8 +1,9 @@
 import favicon from '../assets/svg/react.svg'
-import heroImage from '../assets/images/heroImage.jpg'
-
+import devImage from '../assets/images/devImage.jpg'
+import hero from '../assets/images/hero.jpg'
 
 export default {
      favicon,
-     heroImage
+     hero,
+     devImage
 };

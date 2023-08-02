@@ -10,7 +10,8 @@ module.exports = {
         tertiary: "#151030",
         "black-100": "#100d25",
         "black-200": "#090325",
-        "white-100": "#f3f3f3"
+        "white-100": "#f3f3f3",
+        "sky-blue": "#1E91E1"
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -25,11 +26,7 @@ module.exports = {
         md: "1060px",
         lg: "1200px",
         xl: "1700px"
-      },
-      
-      backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
-      },
+      }
     },
   },
   plugins: [],
