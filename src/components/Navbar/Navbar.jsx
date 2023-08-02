@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HiMenuAlt2, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 import './Navbar.scss'
@@ -8,11 +8,26 @@ import { Link, animateScroll as scroll } from "react-scroll"
 const Navbar = () => {
 
      const [toggle, setToggle] = useState(false);
+     const [scrolled, setScrolled] = useState(false);
 
-     // const [scrolled, setScrolled] = useState(false);
+     const scrollHandler = () => {
+          if(window.scrollY >= 20){
+               setScrolled(true)
+          }
+          else {
+               setScrolled(false)
+          }
+     }
+
+     useEffect(()=> {
+          window.addEventListener('scroll', scrollHandler);
+          return () => {
+               window.removeEventListener('scroll', scrollHandler);
+          }
+     }, []);
 
      return (
-          <nav className='fixed top-0 left-0 right-0 w-full flex py-6 justify-between items-center navbar z-10 bg-primary'>
+          <nav className={`fixed top-0 left-0 right-0 w-full flex py-6 justify-between items-center navbar z-10 bg-primary ${scrolled ? 'backdrop-blur-md bg-opacity-80' : ''}`}>
                <div>
                     <h1 className='text-4xl ml-2 text-white cursor-pointer' id='logo' onClick={scroll.scrollToTop}>Dinith</h1>
                </div>
