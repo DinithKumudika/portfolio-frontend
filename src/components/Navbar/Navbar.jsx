@@ -9,17 +9,18 @@ const Navbar = () => {
 
      const [toggle, setToggle] = useState(false);
      const [scrolled, setScrolled] = useState(false);
-
-     const scrollHandler = () => {
-          if(window.scrollY >= 20){
-               setScrolled(true)
-          }
-          else {
-               setScrolled(false)
-          }
-     }
+     const [activeLink, setActiveLink] = useState('home')
 
      useEffect(()=> {
+          const scrollHandler = () => {
+               if(window.scrollY >= 30){
+                    setScrolled(true)
+               }
+               else {
+                    setScrolled(false)
+               }
+          }
+
           window.addEventListener('scroll', scrollHandler);
           return () => {
                window.removeEventListener('scroll', scrollHandler);
@@ -33,8 +34,8 @@ const Navbar = () => {
                </div>
                <ul className="z-50 list-none hidden md:flex justify-end items-center flex-1">
                     {nav.map(({ id, title, link }, index) => (
-                         <motion.li key={id} className={`nav-links px-4 cursor-pointer capitalize text-lg text-white hover:scale-105 duration-200 nav-link`}>
-                              <Link to={link} smooth duration={300} spy={true} activeClass='text-blue'>
+                         <motion.li key={id} className={`nav-links px-4 cursor-pointer capitalize text-white text-lg hover:scale-105 duration-200 nav-link `}>
+                              <Link to={link} smooth duration={300} spy={true} activeClass='text-cyan-300'>
                                    {title}
                               </Link>
                          </motion.li>
@@ -50,7 +51,7 @@ const Navbar = () => {
                          transition={{ duration: 0.5, ease: 'easeOut' }}
                     >
                          {nav.map(({ id, title, link }) => (
-                              <motion.li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl text-gradient hover:text-white duration-200" whileTap={{ scale: 0.9 }}>
+                              <motion.li key={id} className={`px-4 cursor-pointer capitalize py-6 text-4xl text-gradient hover:text-white duration-200`} whileTap={{ scale: 0.9 }}>
                                    <Link
                                         onClick={() => setToggle(!toggle)}
                                         to={link}

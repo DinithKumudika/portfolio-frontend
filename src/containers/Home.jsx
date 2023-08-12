@@ -36,17 +36,21 @@ const Home = ({ title, id }) => {
                                    repeat={Infinity}
                               />
                          </motion.h2>
-                         <div className='mt-10'>
+                         <motion.div initial={{ opacity: 0, y: 20 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5, delay: 1.1 }} 
+                              className='mt-10'
+                         >
                               <motion.button
                                    initial={{opacity: 0, x: -1000 }}
                                    animate={{opacity: 1, x: 0 }}
-                                   transition={{ duration: 1, delay: 0.5 }}
-                                   className='flex justify-center items-center bg-gradient-to-r from-cyan-500 via blue-500 to-indigo-500 rounded-lg text-white px-4 py-2 w-auto'
+                                   transition={{ duration: 0.5, delay: 1.1 }}
+                                   className='flex justify-center items-center bg-gradient-to-r from-cyan-500 via blue-500 to-indigo-500 rounded-lg text-white px-5 py-3 w-auto'
                               >
                                    <HiOutlineDownload size={20} className='mr-3' />
                                    Download CV
                               </motion.button>
-                         </div>
+                         </motion.div>
                     </div>
                </div>
           </div>

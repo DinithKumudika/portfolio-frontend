@@ -1,10 +1,13 @@
 import React from 'react';
+import { SectionHeading } from '../components';
 import { images } from '../constants';
 
 const About = ({title, id}) => {
      return (
           <div id={id} className="w-full h-screen bg-gradient-to-b from-black to-gray-800 pt-5 pb-5">
-               <div className='text-white flex justify-center pt-5 pb-5 text-[35px]'>{title}</div>
+               <div className='text-white flex justify-center pt-5 pb-5 text-[35px]'>
+                    <SectionHeading title={'About'}/>
+               </div>
                <div className='flex justify-center items-center gap-10'>
                     <div className='text-white w-[40%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Distinctio rerum deserunt quisquam! Nostrum, 
